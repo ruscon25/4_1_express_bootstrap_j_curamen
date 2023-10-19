@@ -7,6 +7,32 @@ body {
 .navbar {
     background-color: #333;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    max-height: 60px;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.navbar:hover {
+    max-height: 300px; /* Adjust the desired expanded height */
+}
+
+.navbar-toggler {
+    display: none;
+}
+
+.container:hover .navbar-toggler {
+    display: block;
+}
+
+.collapse {
+    display: none;
+}
+
+.container:hover .collapse {
+    display: block;
+}
+
+.navbar-title:hover {
+    cursor: pointer;
 }
 
 .navbar-brand {
