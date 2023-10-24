@@ -13,123 +13,117 @@
   <div>
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-          <div class="navbar-title">
             <a class="navbar-brand" href="#">NavBar with Register Modal</a>
-            <div class="vertical-divider"></div> <!-- Vertical Divider -->
-          </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Contact Us</a>
-                </li>
-            </ul>
-            <button class="btn btn-info admin-btn">
-                Admin
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-          </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Products</a>
+                    </li>
+                    <li>
+                      <div class="search-form">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    </div>
+                    </li>
+                    <li><button class="btn btn-outline-success" type="button">Search</button></li>
+                </ul>
+            </div>
         </div>
-      </nav>
-    </div>
-    <div class="container mt-5">
-        <h4>Login</h4>
-        <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="Email address" required>
-            <label for="floatingInput">Email address</label>
-        </div>
-        <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
-            <label for="floatingPassword">Password</label>
-        </div>
-        <div class="mt-3 access-grp">
-            <button type="button" class="btn btn-primary">Login</button>
-            <button type="button" class="btn btn-success register-btn" data-bs-toggle="modal" data-bs-target="#registerModal">Register</button>
-        </div>
-        <a class="text-center" href="#">Forgot Password?</a>
-    </div>
+    </nav>
+  </div>
 
-    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Create Account</h1>
-              <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+  <div class="container mt-5">
+    <h4>Login</h4>
+    <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="floatingInput" placeholder="Email address" required>
+        <label for="floatingInput">Email address</label>
+    </div>
+    <div class="form-floating">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+        <label for="floatingPassword">Password</label>
+    </div>
+    <div class="mt-3 access-grp">
+        <button type="button" class="btn btn-primary">Login</button>
+        <button type="button" class="btn btn-success register-btn" data-bs-toggle="modal" data-bs-target="#registerModal">Register</button>
+    </div>
+    <a class="text-center" href="#">Forgot Password?</a>
+  </div>
+
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Create Account</h1>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="Email" placeholder="Email Address" required>
+                <label for="Email">Email Address</label>
             </div>
-            <div class="modal-body">
-              <form>
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="Email" placeholder="Email Address" required>
-                    <label for="Email">Email Address</label>
-                </div>
-                <div class="form-floating mb-3">
-                  <input type="text" class="form-control" id="Username" placeholder="Name" required>
-                  <label for="Name">Name</label>
-                </div>
-                <div class="form-floating mb-3">
-                  <input type="password" class="form-control" id="Password" placeholder="Password" required>
-                  <label for="Password">Password</label>
-                </div>
-                <div class="form-floating mb-3">
-                  <input type="password" class="form-control" id="ConfirmPassword" placeholder="Confirm Password" required>
-                  <label for="ConfirmPassword">Confirm Password</label>
-                </div>
-                <div>
-                    <label>Gender</label>
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="Gender" id="Other" checked value="Other">
-                      <label class="form-check-label" for="Other">
-                        Rather not say
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="Gender" id="Male" value="Male">
-                      <label class="form-check-label" for="Male">
-                        Male
-                      </label>
-                    </div>
-                    <div class="form-check mb-3">
-                      <input class="form-check-input" type="radio" name="Gender" id="Female" value="Female">
-                      <label class="form-check-label" for "Female">
-                        Female
-                      </label>
-                    </div>
-                </div>
-                <div class="form-floating mb-3">
-                    <select class="form-select" id="floatingSelect">
-                      <option selected>Select Year Level</option>
-                      <option value="1">First</option>
-                      <option value="2">Second</option>
-                      <option value="3">Third</option>
-                      <option value="4">Fourth</option>
-                    </select>
-                    <label for="floatingSelect">Year Level</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <div class="input-group">
-                        <span class="input-group-text">Address</span>
-                        <input type="text" class="form-control">
-                    </div>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="date" class="form-control" id="Birthdate" placeholder="Birthdate">
-                    <label for="Birthdate">Birthdate</label>
-                </div>
-              </form>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="Username" placeholder="Name" required>
+              <label for="Username">Name</label>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-success register-btn">Register</button>
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control" id="Password" placeholder="Password" required>
+              <label for="Password">Password</label>
             </div>
-          </div>
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control" id="ConfirmPassword" placeholder="Confirm Password" required>
+              <label for="ConfirmPassword">Confirm Password</label>
+            </div>
+            <div>
+              <label>Gender</label>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="Gender" id="Other" checked value="Other">
+                <label class="form-check-label" for="Other">
+                  Rather not say
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="Gender" id="Male" value="Male">
+                <label class="form-check-label" for="Male">
+                  Male
+                </label>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="Gender" id="Female" value="Female">
+                <label class="form-check-label" for="Female">
+                  Female
+                </label>
+              </div>
+            </div>
+            <div class="form-floating mb-3">
+              <select class="form-select" id="floatingSelect">
+                <option selected>Select Year Level</option>
+                <option value="1">First</option>
+                <option value="2">Second</option>
+                <option value="3">Third</option>
+                <option value="4">Fourth</option>
+              </select>
+              <label for="floatingSelect">Year Level</label>
+            </div>
+            <div class="form-floating mb-3">
+              <div class="input-group">
+                <span class="input-group-text">Address</span>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="date" class="form-control" id="Birthdate" placeholder="Birthdate">
+              <label for="Birthdate">Birthdate</label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success register-btn">Register</button>
         </div>
       </div>
+    </div>
+  </div>
 </body>
 </html>
