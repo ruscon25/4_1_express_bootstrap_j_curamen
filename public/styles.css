@@ -12,7 +12,7 @@ body {
 }
 
 .navbar:hover {
-    max-height: 300px; /* Adjust the desired expanded height */
+    max-height: 300px;
 }
 
 .navbar-toggler {
@@ -65,19 +65,37 @@ body {
     background-color: #0be139;
 }
 
-.admin-btn {
-    background-color: transparent;
-    color: #007BFF;
-    border: none;
+.btn-light[title="Heart Icon"] {
+    background-color: #fff;
+    color: #c42b09;
+    border: 1px solid #ccc;
+    padding: 5px;
 }
 
-.admin-btn:hover {
-    color: #0056b3;
+.btn-light[title="Heart Icon"]:hover {
+    background-color: #c9c9c9;
 }
+
+.footer-buttons {
+    display: flex;
+    gap: 10px; /* Add some spacing between buttons */
+    width: 70%; /* Set a specific width for the buttons */
+    justify-content: flex-end; /* Push buttons to the right */
+    align-items: center; /* Center vertically within the footer */
+    transform: translateX(330px);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Push price description to the left and buttons to the right */
+    align-items: center; /* Vertically center content */
+}
+
 button {
     width: 100px;
     height: 50px;
 }
+
 .button_search {
     width: 85px;
     height: 35px;
@@ -87,35 +105,95 @@ button {
     align-content: center;
 }
 
-/* .access-grp {
-    justify-content: center;
+.container {
     text-align: center;
-    align-items: center;
-    flex: 1;
-} */
-
-.container{
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    flex: 1;
 }
 
-.modal-header{
+.catalog-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    text-align: left;
+    position: relative; /* Relative positioning for the card */
+}
+
+.card {
+    height: 120%;
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    max-width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.card-img{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 200px;
+    min-width: 100px;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-subtitle {
+    font-size: 0.875rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    flex: 1;
+    overflow: auto;
+    font-size: 0.875rem;
+}
+
+.price-description {
+    margin: 0; /* Remove default margin */
+    font-weight: bold; /* Make the price description bold */
+    font-size: 1rem; /* Adjust font size as needed */
+    text-align: left;
+    width: 50%; /* Set a specific width for the price description */
+}
+
+.card-footer {
+    background-color: #f4f4f4; /* Background color for the footer container */
+    padding: 10px; /* Add some padding for spacing */
+    display: flex;
+    justify-content: space-between; /* Push buttons to the right and price description to the left */
+    align-items: center; /* Center vertically within the footer */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.card-text {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.card-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.modal-header {
     background-color: #8232ad;
     color: #fff;
-    height:95px;
+    height: 95px;
     width: 100%;
-}
-
-.navbar-title {
-    display: flex;
-    align-items: center;
-}
-
-.vertical-divider {
-    width: 2px;
-    height: 30px;
-    background-color: #fff;
-    margin-left: 10px; 
 }
