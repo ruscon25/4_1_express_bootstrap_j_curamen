@@ -6,145 +6,113 @@
     <title>NavBar + Register Modal</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 </head>
 <body>
-
-    <!--NAVBAR-->
-  <div>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
             <a class="navbar-brand" href="#">NavBar with Register Modal</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <!--NAVBAR LINKS/BUTTONS-->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Login</a>
+                        <a class="nav-link active" href="login.html">Home</a>
                     </li>
                     <li>
-                      <div class="search-form">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    </div>
-                    </li>
-                    <li><button class="btn btn-outline-success" type="button">Search</button></li>
-                    <li>
-                        <div class="vertical-divider">
-                        </div>
-                        <div class="vertical-divider"></div>
-                    </li>
-                    <li>
-                        <button class="btn btn-success col-16 p-1" type="button" data-bs-toggle="modal" data-bs-target="#addProductModal">
+                        <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#addProductModal">
                             Add Product
                         </button>
-                    </li>            
+                    </li>
                 </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
             </div>
         </div>
-        <button type="button" class="btn btn-outline-primary position-relative p-1 mx-4">
-            Cart
-            <span class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-danger">
-              99+
-              <span class="visually-hidden">Items</span>
-            </span>
-          </button>
     </nav>
-  </div>
-
-
-  <!--CONTAINER FOR DISPLAYING PRODUCTS-->
-  <div class="container-fluid">
+  
+  <div class="container mt-5">
     <div class="row">
-        <div class="col-md-4 col-sm-6">
-            <div class="card catalog-card">
-                <img src="img/image1.jpg" class="card-img" alt="Product 1">
-                <div class="card-body">
-                    <h5 class="card-title">ASUS ROG G703GXR</h5>
-                    <h6 class="card-subtitle"><strong>Specifications</strong></h5>
-                    <div class="card-description">
-                        <p><strong>Processor:</strong> Intel Core i7-9750H 6 x 2.6 - 4.5 GHz, Coffee Lake-H</p>
-                        <p><strong>Graphics adapter: </strong> NVIDIA GeForce RTX 2080 Mobile - 8 GB VRAM, Core: 1575 MHz, Memory: 7000 MHz, GDDR6, ForceWare 419.71, Optimus</p>
-                        <p><strong>Memory:</strong> 32 GB, 2x 16 GB SO-DIMM DDR4-2666, dual-channel, 2 of 4 slots occupied, max. 64 GB</p>
-                        <p><strong>Display:</strong> 17.30 inch 16:9, 1920 x 1080 pixel 127 PPI, AU Optronics B173HAN04.0 (AUO409D), IPS, Full HD, 144 Hz, G-sync, glossy: no</p>
-                        <p><strong>Mainboard:</strong> Intel HM370</p>
-                        <p><strong>Storage:</strong> Samsung SSD PM981 MZVLB512HAJQ, 512 GB, + Seagate Firecuda ST1000LX015, 1 TB SSHD, 5400 RPM. Slots: 3x M.2-2280 & 1x 2.5-inch</p>
-                        <p><strong>Weight:</strong> 4.65 kg ( = 164.02 oz / 10.25 pounds), Power Supply: 1.686 kg ( = 59.47 oz / 3.72 pounds)</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="footer-content">
-                            <div class="price-description">Price: $19.99</div>
-                            <div class="footer-buttons">
-                                <button class="btn btn-primary p-1">Add to Cart</button>
-                                <button class="btn btn-light" title="Heart Icon"><i class="fas fa-heart"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <!-- Product Card 1 -->
+<div class="col-md-4">
+    <div class="card mb-4 box-shadow">
+        <img src="img/image1.jpg" class="card-img-top" alt="ASUS ROG G703GXR">
+        <div class="card-body">
+            <div class="card-description">
+                <h5 class="card-title">ASUS ROG G703GXR</h5>
+                <p class="card-text">The ASUS ROG G703GXR is a high-performance gaming laptop designed for the most demanding gamers. With its powerful hardware and cutting-edge features, this laptop delivers an unparalleled gaming experience. Featuring a top-of-the-line processor, high-end graphics card, and a stunning display, the ROG G703GXR ensures smooth gameplay and immersive visuals. It's built for gamers who demand the best in performance and style, making it an ideal choice for competitive gaming and entertainment. Dominate your gaming sessions with the ASUS ROG G703GXR.</p>
             </div>
         </div>
-        <div class="col-md-4 col-sm-6">
-            <div class="card catalog-card">
-                <img src="img/image2.jpg" class="card-img" alt="Product 2">
-                <div class="card-body">
-                    <h5 class="card-title">Asus ROG Strix G17 G713PI</h5>
-                    <h6 class="card-subtitle"><strong>Specifications</strong></h5>
-                        <div class="card-description">
-                            <p><strong>Processor:</strong> AMD Ryzen 9 7945HX 16 x 2.5 - 5.4 GHz, 120 W PL2 / Short Burst, 90 W PL1 / Sustained, Dragon Range-HX (Zen 4)</p>
-                            <p><strong>Graphics adapter: </strong> NVIDIA GeForce RTX 4070 Laptop GPU - 8 GB VRAM, Core: 2225 MHz, Memory: 2000 MHz, 140 W TDP ( including 25 W Dynamic Boost), GDDR6, Game Ready 531.18, MUX Switch + Optimus</p>
-                            <p><strong>Memory:</strong> 32 GB, DDR5-4800 dual-channel</p>
-                            <p><strong>Display:</strong> Display17.30 inch 16:9, 2560 x 1440 pixel 170 PPI, BOE0B69, IPS, glossy: no, 240 Hz</p>
-                            <p><strong>Mainboard:</strong> AMD Promontory/Bixby FCH</p>
-                            <p><strong>Storage:</strong> WD PC SN560 SDDPNQE-1T00, 1024 GB</p>
-                            <p><strong>Weight:</strong> 2.78 kg ( = 98.06 oz / 6.13 pounds), Power Supply: 640 g ( = 22.58 oz / 1.41 pounds)</p>
-                        </div>
-                    <div class="card-footer">
-                        <div class="footer-content">
-                            <div class="price-description">Price: $24.99</div>
-                            <div class="footer-buttons">
-                                <button class="btn btn-primary p-1">Add to Cart</button>
-                                <button class="btn btn-light" title="Heart Icon"><i class="fas fa-heart"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-6">
-            <div class="card catalog-card">
-                <img src="img/image3.jpg" class="card-img" alt="Product 3">
-                <div class="card-body">
-                    <h5 class="card-title">ASUS ROG Strix G16</h5>
-                    <h6 class="card-subtitle"><strong>Specifications</strong></h5>
-                        <div class="card-description">
-                            <p><strong>Processor:</strong> Intel Core i9-13980HX 24 x 1.6 - 5.6 GHz, 175 W PL2 / Short Burst, 130 W PL1 / Sustained, Raptor Lake-HX</p>
-                            <p><strong>Graphics adapter: </strong> NVIDIA GeForce RTX 4080 Laptop GPU - 12 GB VRAM, 175 W TDP ( including 25 W Dynamic Boost), Intel Iris Xe 96 EUs</p>
-                            <p><strong>Memory:</strong> 16 GB, DDR5-4800</p>
-                            <p><strong>Display:</strong> 16.00 inch 16:10, 2560 x 1600 pixel 189 PPI, TL160ADMP03-0, IPS, glossy: no, 240 Hz</p>
-                            <p><strong>Mainboard:</strong> Intel HM770 (Raptor Lake-S PCH)</p>
-                            <p><strong>Storage:</strong> WD PC SN560 SDDPNQE-1T00, 1024 GB, 850 GB free</p>
-                            <p><strong>Weight:</strong> 2.382 kg ( = 84.02 oz / 5.25 pounds), Power Supply: 966 g ( = 34.07 oz / 2.13 pounds)</p>
-                        </div>
-                    <div class="card-footer">
-                        <div class="footer-content">
-                            <div class="price-description">Price: $19.99</div>
-                            <div class="footer-buttons">
-                                <button class="btn btn-primary p-1">Add to Cart</button>
-                                <button class="btn btn-light" title="Heart Icon"><i class="fas fa-heart"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="card-footer">
+            <p class="price">₱189,799</p>
+            <button class="btn btn-primary">
+                <i class="fas fa-cart-plus"></i> Add to Cart
+            </button>
+            <button class="btn btn-danger">
+                <i class="fas fa-heart"></i> Favorite
+            </button>
         </div>
     </div>
 </div>
 
-<!--MODAL FOR ADDING PRODUCTS-->
-  <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
+<!-- Product Card 2 -->
+<div class="col-md-4">
+    <div class="card mb-4 box-shadow">
+        <img src="img/image2.jpg" class="card-img-top" alt="Asus ROG Strix G17 G713PI">
+        <div class="card-body">
+            <div class="card-description">
+                <h5 class="card-title">Asus ROG Strix G17 G713PI</h5>
+                <p class="card-text">The Asus ROG Strix G17 G713PI is a high-performance gaming laptop designed for gamers seeking an immersive gaming experience. Featuring a powerful processor, high-refresh-rate display, and robust graphics, this laptop delivers seamless gameplay with stunning visuals. Whether you're battling opponents online or diving into the latest AAA titles, the Asus ROG Strix G17 G713PI offers the performance and speed you need for an exceptional gaming adventure.</p>
+            </div>
+        </div>
+        <div class="card-footer">
+            <p class="price">₱210,599</p>
+            <button class="btn btn-primary">
+                <i class="fas fa-cart-plus"></i> Add to Cart
+            </button>
+            <button class="btn btn-danger">
+                <i class="fas fa-heart"></i> Favorite
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Product Card 3 -->
+<div class="col-md-4">
+    <div class="card mb-4 box-shadow">
+        <img src="img/image3.jpg" class="card-img-top" alt="ASUS ROG Strix G16">
+        <div class="card-body">
+            <div class="card-description">
+                <h5 class="card-title">ASUS ROG Strix G16</h5>
+                <p class="card-text">Experience unmatched gaming performance with the ASUS ROG Strix G16 gaming laptop. Powered by cutting-edge hardware, this sleek and powerful laptop delivers smooth gameplay and breathtaking visuals. Whether you're an esports enthusiast or a dedicated gamer, the ROG Strix G16 is your gateway to victory, offering lightning-fast speed and a stunning display for an immersive gaming experience.</p>
+            </div>
+        </div>
+        <div class="card-footer">
+            <p class="price">₱190,000</p>
+            <button class="btn btn-primary">
+                <i class="fas fa-cart-plus"></i> Add to Cart
+            </button>
+            <button class="btn btn-danger">
+                <i class="fas fa-heart"></i> Favorite
+            </button>
+        </div>
+    </div>
+</div>
+
+
+    </div>
+</div>
+
+
+<!-- MODAL FOR ADD PRODUCT-->
+
+<div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -167,7 +135,8 @@
                             <span class="input-group-text">₱</span>
                             <input type="number" class="form-control" id="productPrice" required>
                         </div>
-                    </div>                    
+                    </div>
+                    
                     <div class="mb-3">
                         <label for="productImage" class="form-label">Product Image</label>
                         <input type="file" class="form-control" id="productImage" accept="image/*" required>
@@ -175,11 +144,13 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-outline-secondary p-1" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-outline-success p-1" id="addProductButton">Add Product</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="addProductButton">Add Product</button>
             </div>
         </div>
     </div>
 </div>
+
+
 </body>
 </html>
